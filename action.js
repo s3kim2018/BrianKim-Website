@@ -1,10 +1,20 @@
 function main() {
     goby(); 
-    var indiv1 = document.querySelector(".content .projects .projectscontainer #elem1");
-    var indiv2 = document.querySelector(".content .projects .projectscontainer #elem2");
-    var indiv3 = document.querySelector(".content .projects .projectscontainer #elem3");
-    var indiv4 = document.querySelector(".content .projects .projectscontainer #elem4");
-    var indiv1 = document.querySelector(".content .projects .projectscontainer #elem5");
+    var indiv1 = document.querySelector(".sidebar #aboutme");
+    var indiv2 = document.querySelector(".sidebar #projects");
+    var indiv3 = document.querySelector(".sidebar #Resume");
+    indiv1.addEventListener("click", function() {
+        var scrollto = document.querySelector(".content .aboutme");
+        scrollto.scrollIntoView(); 
+    });
+    indiv2.addEventListener("click", function() {
+        var scrollto = document.querySelector(".content .projects");
+        scrollto.scrollIntoView(); 
+    });
+    indiv3.addEventListener("click", function() {
+        var scrollto = document.querySelector(".content .resume");
+        scrollto.scrollIntoView(); 
+    });
 
 }
 

@@ -1,4 +1,7 @@
 /* General */
+html {
+    scroll-behavior: smooth;
+  }
 .sidebar {
     background: white;
     float: left; 
@@ -385,7 +388,7 @@
 /* Resume Section */
 .content .resume {
     background-color:  #f5f7f2; 
-    padding-bottom: 20px; 
+    padding-bottom: 40px; 
 }
 
 .content .resume h3 {
@@ -393,4 +396,9 @@
     margin-top: 0; 
     margin-left: 10%; 
     margin-right: 10%; 
+}
+
+.content .resume iframe {
+    margin-left: 5%; 
+    margin-right: 5%;
 }
