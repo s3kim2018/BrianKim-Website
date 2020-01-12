@@ -1,0 +1,396 @@
+/* General */
+.sidebar {
+    background: white;
+    float: left; 
+    width: 35%; 
+    height: 100%;
+    position: fixed; 
+}
+.content{
+    background: #f5f7f2; 
+    float:right;
+    width: 65%; 
+    height: 100%;
+}
+
+/* Sidebar Settings */
+.sidebar #face {
+    display: block; 
+    margin-left: auto; 
+    margin-top: 3%; 
+    margin-right: auto; 
+    width: 125px; 
+    height: 155px; 
+    border-radius: 70px; 
+}
+.sidebar #nametext {
+    text-align: center; 
+    margin-top: 10px;
+
+}
+
+.sidebar text {
+    color: black; 
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold; 
+}
+
+.sidebar #icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.sidebar #icons #github {
+    margin: 0; 
+    width: 23px; 
+    height: 23px; 
+    margin-left: 43%;
+    border-radius: 30px; 
+    transition: background-color 300ms linear;
+}
+.sidebar #icons #github:hover {
+    cursor: pointer;
+    background: lightgray; 
+}
+.sidebar #icons #linkedin {
+    margin: 0; 
+    width: 23px; 
+    height: 23px; 
+    margin-right: 43%;
+    border-radius: 30px; 
+    transition: background-color 300ms linear;
+}
+.sidebar #icons #linkedin:hover {
+    cursor: pointer;
+    background: lightgray; 
+}
+
+.sidebar #specs {
+    padding-top: 3%; 
+    color: #87ceeb;
+    font-size: 17px; 
+    text-align: center; 
+}
+
+.sidebar #arrow1 {
+    display: block; 
+    margin-left: auto; 
+    margin-top: 3%; 
+    margin-right: auto; 
+    margin-top: 4%; 
+    width: 35px; 
+    height: 45px; 
+    background: white; 
+}
+
+.sidebar #aboutme {
+    display: block;
+    float: none;
+    width: 38px;
+    height: 34px;   
+    line-height: 34px; 
+    margin: 0 auto; 
+    background-color: white;
+    border: solid red 4px;
+    color: black;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50%;
+    white-space: nowrap;
+    text-align: center;
+    transition: background-color 300ms linear;
+}
+
+.sidebar #aboutme:hover {
+    cursor: pointer; 
+    background: lightgray; 
+}
+
+.sidebar #aboutme .overflow{
+    font-size: 15px; 
+    font-weight: bold; 
+    margin-left: -100%;
+    margin-right: -100%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.sidebar #arrow2 {
+    display: block; 
+    margin-left: auto; 
+    margin-top: 3%; 
+    margin-right: auto; 
+    width: 40px;
+    height: 50px; 
+    margin: 0 auto; 
+}
+
+.sidebar #projects {
+    display: block;
+    float: none;
+    width: 38px;
+    height: 34px;   
+    line-height: 34px; 
+    margin: 0 auto; 
+    background-color: white;
+    border: solid greenyellow 4px;
+    color: black;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50%;
+    white-space: nowrap;
+    text-align: center;
+    transition: background-color 300ms linear;
+
+}
+.sidebar #projects:hover {
+    cursor: pointer; 
+    background: lightgray; 
+}
+.sidebar #projects .overflow {
+    font-size: 15px; 
+    font-weight: bold; 
+    margin-left: -100%;
+    margin-right: -100%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.sidebar #resume {
+    display: block;
+    float: none;
+    width: 38px;
+    height: 34px;   
+    line-height: 34px; 
+    margin: 0 auto; 
+    background-color: white;
+    border: solid darkblue 4px;
+    color: black;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50%;
+    white-space: nowrap;
+    text-align: center;
+    transition: background-color 300ms linear;
+}
+
+.sidebar #resume:hover {
+    cursor: pointer; 
+    background: lightgray; 
+}
+.sidebar #resume .overflow{
+    font-size: 15px; 
+    font-weight: bold; 
+    margin-left: -100%;
+    margin-right: -100%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.sidebar #arrow3 {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top : 0; 
+    margin-bottom:0; 
+    width: 35px; 
+    height: 45px; 
+    background: white; 
+}
+
+/* About Me Settings */
+
+.content .aboutme {
+    text-align: left; 
+    background-color: #f5f7f2; 
+}
+
+.content .aboutme h3 {
+    margin-left: 10%;
+    margin-right: 10%; 
+}
+.content .aboutme p {
+    margin-left: 10%;
+    margin-right: 10%; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #404040;
+}
+
+/* Projects Settings */
+
+.content .projects {
+    text-align: left; 
+    background-color: #f5f3ef;
+    padding-top: 10px;  
+    padding-bottom: 30px; 
+}
+
+.content .projects h3 {
+    margin-left: 10%; 
+    margin-right: 10%;
+}
+
+.content .projects p {
+    margin-left: 10%; 
+    margin-right: 10%;
+}
+
+.content .projects .projectscontainer {
+    margin-left: 10%; 
+    margin-right: 10%;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+
+}
+
+.content .projects .projectscontainer .elem {
+    width: 220px; 
+    height: 300px; 
+    border-radius: 5px; 
+    margin: 8px; 
+    text-align: center; 
+    background: white; 
+}
+
+.content .projects .projectscontainer #elem1 {
+    background: url("img/gif1.gif");
+    height: 300px; 
+    background-position: center;
+    background-size: contain; 
+    background-repeat: repeat-y; 
+
+}
+
+.content .projects .projectscontainer #elem2 {
+    background: url("img/gif2.gif");
+    height: 300px; 
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+.content .projects .projectscontainer #elem3 {
+    background: url("img/calc.png");
+    height: 300px; 
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+.content .projects .projectscontainer #elem4 {
+    background: url("img/chess.gif");
+    height: 300px; 
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+.content .projects .projectscontainer #elem5 {
+    background: url("img/dijkstra.gif");
+    height: 300px; 
+    background-position: bottom;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+.content .projects .sprojectscontainer {
+    margin-left: 10%; 
+    margin-right: 10%;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+}
+
+.content .projects .sprojectscontainer .elem {
+    width: 220px; 
+    height: 300px; 
+    border-radius: 5px; 
+    margin: 8px; 
+    text-align: center; 
+    background: white; 
+}
+
+.content .projects .sprojectscontainer #elem1 {
+    background: url("img/scheme.jpg");
+    height: 300px; 
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+
+}
+
+.content .projects .sprojectscontainer #elem2 {
+    background: url("img/enigma.png");
+    height: 300px; 
+    background-position: bottom;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+.content .projects .sprojectscontainer #elem3 {
+    background: url("img/tablut.png");
+    height: 300px; 
+    background-position: bottom;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+.content .projects .sprojectscontainer #elem4 {
+    background: url("img/git.png");
+    height: 300px; 
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+.content .projects .projectscontainer .elem:hover {
+    cursor: pointer;
+}
+.content .projects .sprojectscontainer .elem:hover {
+    cursor: pointer;
+}
+
+
+.content .projects .projectscontainer .box {
+    width: 220px;
+    height: 0px;
+    color: white; 
+    font-size: 13px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center; 
+    background-color: #404040;
+    opacity: 0.8; 
+}
+
+.content .projects .sprojectscontainer .box {
+    width: 220px;
+    height: 0px;
+    color: white; 
+    font-size: 13px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center; 
+    background-color: #404040;
+    opacity: 0.8; 
+}
+
+/* Resume Section */
+.content .resume {
+    background-color:  #f5f7f2; 
+    padding-bottom: 20px; 
+}
+
+.content .resume h3 {
+    padding-top: 30px; 
+    margin-top: 0; 
+    margin-left: 10%; 
+    margin-right: 10%; 
+}
