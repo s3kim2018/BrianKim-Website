@@ -16,11 +16,11 @@ function main() {
         scrollto.scrollIntoView(); 
     });
 
-    checkdisplay() 
+    checkdisplay(); 
 }
 
 function checkdisplay() {
-    var x = window.matchMedia("(max-width: 700px)")
+    var x = window.matchMedia("(max-width: 940px)")
     changedisplay(x); 
     setTimeout(checkdisplay, 1000);
 }
