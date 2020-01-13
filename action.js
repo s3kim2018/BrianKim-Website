@@ -16,6 +16,31 @@ function main() {
         scrollto.scrollIntoView(); 
     });
 
+    checkdisplay() 
+}
+
+function checkdisplay() {
+    var x = window.matchMedia("(max-width: 700px)")
+    changedisplay(x); 
+    setTimeout(checkdisplay, 1000);
+}
+
+function changedisplay(x) {
+    var sidebar = document.querySelector(".sidebar");
+    var content = document.querySelector(".content");
+    if (x.matches) { // If media query matches
+        sidebar.style.cssFloat = "center"; 
+        sidebar.style.width = "100%";
+        sidebar.style.position = "static";
+        content.style.cssFloat = "center";
+        content.style.width = "100%";
+    } else {
+        sidebar.style.cssFloat = "left"; 
+        sidebar.style.width = "35%";
+        sidebar.style.position = "fixed";
+        content.style.cssFloat = "right";
+        content.style.width = "65%";
+    }
 }
 
 async function delay(delayInms) {
@@ -76,8 +101,9 @@ var hover = async function(element, hov, option) {
     }
     hover.alreadyHovered = true; 
     console.log(element);
-    elem.style.transition = "all 400ms ease-in-out";
+    elem.style.transition = "all 280ms ease-in-out";
     elem.style.height = "221px";
+    await delay(280);
     if (option == 1) {
         elem.innerHTML = "<br>Created my own website <br> Used HTML, CSS, Javascript <br> A serious swig of JS was used to animate this website. <br> <br> 1) Used Flexbox for alignment <br> 2) Used JS for hovering animations <br> 3) Used Media Queries to optimize my website for phones"
     } else if (option == 2) {
@@ -99,15 +125,15 @@ var hover = async function(element, hov, option) {
     }
 
 }
-function unhover(element, hov) {
+async function unhover(element, hov) {
     var hover = document.querySelector(hov);
     var elem = document.querySelector(element);
     console.log(element);
-    elem.innerHTML = "";
     hover.alreadyHovered = false; 
-    elem.style.transition = "all 400ms ease-in-out";
+    elem.style.transition = "all 280ms ease-in-out";
     elem.style.height = "0";
-
+    await delay(280);
+    elem.innerHTML = "";
 }
 
 main(); 

@@ -25,6 +25,7 @@ html {
     width: 125px; 
     height: 155px; 
     border-radius: 70px; 
+    pointer-events: none;
 }
 .sidebar #nametext {
     text-align: center; 
@@ -86,6 +87,7 @@ html {
     width: 35px; 
     height: 41px; 
     background: white; 
+    pointer-events: none;
 }
 
 .sidebar #aboutme {
@@ -109,7 +111,7 @@ html {
 
 .sidebar #aboutme:hover {
     cursor: pointer; 
-    background: lightgray; 
+    background: #FA8072; 
 }
 
 .sidebar #aboutme .overflow{
@@ -130,6 +132,7 @@ html {
     width: 40px;
     height: 46px; 
     margin: 0 auto; 
+    pointer-events: none;
 }
 
 .sidebar #projects {
@@ -140,7 +143,7 @@ html {
     line-height: 34px; 
     margin: 0 auto; 
     background-color: white;
-    border: solid greenyellow 4px;
+    border: solid #32CD32 4px;
     color: black;
     padding: 30px;
     text-decoration: none;
@@ -153,7 +156,7 @@ html {
 }
 .sidebar #projects:hover {
     cursor: pointer; 
-    background: lightgray; 
+    background: #7CFC00	; 
 }
 .sidebar #projects .overflow {
     font-size: 15px; 
@@ -173,7 +176,7 @@ html {
     line-height: 34px; 
     margin: 0 auto; 
     background-color: white;
-    border: solid darkblue 4px;
+    border: solid #0000CD 4px;
     color: black;
     padding: 30px;
     text-decoration: none;
@@ -186,7 +189,7 @@ html {
 
 .sidebar #resume:hover {
     cursor: pointer; 
-    background: lightgray; 
+    background: #00BFFF; 
 }
 .sidebar #resume .overflow{
     font-size: 15px; 
@@ -207,6 +210,15 @@ html {
     width: 35px; 
     height: 40px; 
     background: white; 
+    pointer-events: none;
+}
+
+.sidebar img {
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* About Me Settings */
