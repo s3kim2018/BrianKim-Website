@@ -31,12 +31,14 @@ function changedisplay(x) {
     if (x.matches) { // If media query matches
         sidebar.style.cssFloat = "center"; 
         sidebar.style.width = "100%";
+        sidebar.style.height = "110%";
         sidebar.style.position = "static";
         content.style.cssFloat = "center";
         content.style.width = "100%";
     } else {
         sidebar.style.cssFloat = "left"; 
         sidebar.style.width = "35%";
+        sidebar.style.height = "100%";
         sidebar.style.position = "fixed";
         content.style.cssFloat = "right";
         content.style.width = "65%";
