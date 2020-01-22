@@ -105,17 +105,17 @@ var hover = async function(element, hov, option) {
     console.log(element);
     elem.style.transition = "all 280ms ease-in-out";
     elem.style.height = "221px";
-    await delay(280);
+    await delay(100);
     if (option == 1) {
         elem.innerHTML = "<br>Created my own website <br> Used HTML, CSS, Javascript <br> A serious swig of JS was used to animate this website. <br> <br> 1) Used Flexbox for alignment <br> 2) Used JS for hovering animations <br> 3) Used Media Queries to optimize my website for phones"
     } else if (option == 2) {
         elem.innerHTML = "<br>Made a program that mines data <br> from the web and finds the trend of <br> increasing/decreasing campaign contributions in the U.S. <br><br> 1) Used Beautiful Soup to mine data <br> from the web <br> 2) Used Python for the statistical analysis";
     } else if (option == 3) {
-        elem.innerHTML = "<br>On the user's input, I built a program that can generate randomized derivative problems. The numbers <br> are randomized, and all the problems are solvable using the rules learned <br> at school <br><br> 1) Program was built in python <Br> 2) Recursive data structure was used <br> to generate the randomized problems "
+        elem.innerHTML = "<br>On the user's input, I built a program that can generate randomized derivative problems. The numbers <br> are randomized, and teachers can choose which problems to focus on <br><br> 1) Program was built in python <Br> 2) Recursive data structure was used <br> to generate the randomized problems "
     } else if (option == 4) {
         elem.innerHTML = "<br>Built a Chess engine that can play normal games against an opponent and also has a AI gamemode. The <br> AI can be a bit slow <br><br> 1) Chess game was implemented on JS <br> 2) AI uses game trees with pruning optimization";
     } else if (option == 5) {
-        elem.innerHTML = "<br>Built a Dijkstra and A* visualizer <br> Each square represents a node connected to surrounding squares <br><br> 1) Driver was implemented on JS <br> 2) User has ability to draw walls"
+        elem.innerHTML = "<br>Built a Graph Traversal Visualizer <br> Each square represents a node connected to surrounding squares <br><br> 1) Driver was implemented on JS <br> 2) User has ability to draw walls and add weights <br> 3) DFS, BFS, Dijkstras, A*, and MST generation are supported"
     } else if (option == 6) {
         elem.innerHTML = "<br>Class: CS61A <br> Used Python to recreate the scheme language. For the backend, lots of linked list structures were used. There unfortunately wasn't really a front end gui for this project";
     } else if (option == 7) {
@@ -134,7 +134,7 @@ async function unhover(element, hov) {
     hover.alreadyHovered = false; 
     elem.style.transition = "all 280ms ease-in-out";
     elem.style.height = "0";
-    await delay(280);
+    await delay(100);
     elem.innerHTML = "";
 }
 
