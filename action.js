@@ -80,6 +80,9 @@ function main() {
             });
         document.querySelector(".content .aboutme .buttoncontainer p").style.color = "green";
         document.querySelector(".content .aboutme .buttoncontainer p").innerHTML = "Sent!";
+        document.querySelector(".content .aboutme textarea").value = "";
+        document.querySelector(".content .aboutme #email").value = "";
+
 
     })
 
