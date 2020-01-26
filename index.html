@@ -3,6 +3,7 @@
     <title>Home</title>
     <link rel = "stylesheet" href = "style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>  
 
 </head>
 <body>
@@ -39,11 +40,29 @@
              <a href = "http://www.stat134.org/">Stats134</a>: Concepts of Probability <br/> <br/>
              * I can code in Python, Java, Javascript, HTML, CSS, C++ <br/>
              * I am familiar with Scheme, R-Studio, JQuery, React, and SQL
-          </p>
-          <h3> Contact Info</h3>
-          <p> Email: s3kim2018@berkeley.edu <br> Phone: 510-725-1220</p>
-        <br>
-        <br>
+            </p>
+            <h3> Contact Info</h3>
+            <p> Email: s3kim2018@berkeley.edu <br> Phone: 510-725-1220</p>
+            <br>
+            <h3> Contact Me </h3>
+            <input type="text" id="email" name="lastname" placeholder="Your Email?">
+            <h5> Who Are You?</h5>
+            <select id="whoru" name="whoru">
+                <option value="employer">Employer</option>
+                <option value="friend">Friend</option>
+                <option value="family">Family</option>
+                <option value="troll">Troll</option>
+                <option value="hilfinger">Professor Hilfinger</option>
+                <option value="fuck">Pointer that didn't get Malloced</option>
+            </select>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <br>
+          <div class = "buttoncontainer">
+            <input type="submit" value="Submit">
+            <p> </p>
+          </div>
+            <br>
+            <br>
         </div>
 
         <div class = "projects">

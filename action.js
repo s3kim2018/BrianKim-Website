@@ -1,8 +1,10 @@
+var attempts = 0;
 function main() {
     goby(); 
     var indiv1 = document.querySelector(".sidebar #aboutme");
     var indiv2 = document.querySelector(".sidebar #projects");
     var indiv3 = document.querySelector(".sidebar #Resume");
+    var submitbut = document.querySelector(".content .buttoncontainer input");
     indiv1.addEventListener("click", function() {
         var scrollto = document.querySelector(".content .aboutme");
         scrollto.scrollIntoView(); 
@@ -15,6 +17,71 @@ function main() {
         var scrollto = document.querySelector(".content .resume");
         scrollto.scrollIntoView(); 
     });
+    submitbut.addEventListener("click", function() {
+        document.querySelector(".content .aboutme .buttoncontainer p").style.color = "red";
+        var message = document.querySelector(".content .aboutme textarea").value; 
+        var email = document.querySelector(".content .aboutme #email").value;
+        var whoru = document.querySelector(".content .aboutme #whoru").value;
+        var msg = document.querySelector(".content .aboutme .buttoncontainer p");
+
+        console.log(message);
+        console.log(email);
+        console.log(whoru);
+
+        if (email == "" && message == "") {
+            attempts++;
+            if (attempts > 8) {
+                msg.innerHTML = "Stop Spamming";
+            } else if (attempts > 18) {
+                msg.innerHTML = "Stop.. plz";
+            } else {
+                msg.innerHTML = "Email and Message Cannot be Empty";
+            }
+            return;
+        } else if (email == "") {
+            attempts++;
+            if (attempts > 8) {
+                msg.innerHTML = "Stop Spamming";
+            } else if (attempts > 18) {
+                msg.innerHTML = "Stop.. plz";
+            } else {
+                msg.innerHTML = "Email Cannot be Empty";
+            }
+            return;
+        } else if (message == "") {
+            attempts++;
+            if (attempts > 8) {
+                msg.innerHTML = "Stop Spamming";
+            } else if (attempts > 18) {
+                msg.innerHTML = "Stop.. plz";
+            } else {
+                msg.innerHTML = "Write a Message"
+            }
+            return;
+        } else if (!validate(email)) {
+            attempts++;
+            if (attempts > 8) {
+                msg.innerHTML = "Stop Spamming";
+            } else if (attempts > 18) {
+                msg.innerHTML = "Stop.. plz";
+            } else {
+                msg.innerHTML = "I need a valid email, or try breaking my regex (wink wink)"
+            }
+            return;
+        }
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username : "s3kim2018@berkeley.edu",
+            Password : "9DAF1CD38EF8E3CF0C710DB09FED88565B8D",
+            To : 's3kim2018@berkeley.edu',
+            From : "s3kim2018@berkeley.edu",
+            Subject : "Message from Web, From: " + email,
+            Body : message,
+            });
+        document.querySelector(".content .aboutme .buttoncontainer p").style.color = "green";
+        document.querySelector(".content .aboutme .buttoncontainer p").innerHTML = "Sent!";
+
+    })
 
     checkdisplay(); 
 }
@@ -23,6 +90,11 @@ function checkdisplay() {
     var x = window.matchMedia("(max-width: 940px)")
     changedisplay(x); 
     setTimeout(checkdisplay, 1000);
+}
+
+const validate = (email) => {
+    const expression = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+    return expression.test(String(email).toLowerCase())
 }
 
 function changedisplay(x) {
