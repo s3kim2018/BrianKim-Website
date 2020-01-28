@@ -1,6 +1,7 @@
 var attempts = 0;
 function main() {
     goby(); 
+    fadeout(); 
     var indiv1 = document.querySelector(".sidebar #aboutme");
     var indiv2 = document.querySelector(".sidebar #projects");
     var indiv3 = document.querySelector(".sidebar #Resume");
@@ -23,10 +24,6 @@ function main() {
         var email = document.querySelector(".content .aboutme #email").value;
         var whoru = document.querySelector(".content .aboutme #whoru").value;
         var msg = document.querySelector(".content .aboutme .buttoncontainer p");
-
-        console.log(message);
-        console.log(email);
-        console.log(whoru);
 
         if (email == "" && message == "") {
             attempts++;
@@ -87,6 +84,21 @@ function main() {
     })
 
     checkdisplay(); 
+}
+
+async function fadeout() {
+    await delay(2000);
+    var element = document.querySelector(".loader-wrapper"); 
+    element.style.opacity = 0; 
+    // var op = 1;  // initial opacity
+    // var timer = setInterval(function () {
+    //     if (op <= 0.1){
+    //         clearInterval(timer);
+    //     }
+    //     element.style.opacity = op;
+    //     op -= 0.1;
+    // }, 40);
+    element.style.zIndex = -300; 
 }
 
 function checkdisplay() {

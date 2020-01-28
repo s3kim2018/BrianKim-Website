@@ -242,6 +242,8 @@ html {
 .content .aboutme p {
     margin-left: 10%;
     margin-right: 10%; 
+    margin-bottom: 0; 
+    padding-bottom: 0; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #404040;
 }
@@ -441,6 +443,7 @@ html {
     padding: 0;
     margin-left: 10%; 
 }
+
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
     width: 50%; /* Full width */
@@ -463,10 +466,56 @@ input[type=submit] {
     border-radius: 4px;
     margin-left: 10%; 
     cursor: pointer;
-  }
+}
   
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+background-color: #45a049;
+}
 
+
+/* Style Loading color */
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: #87CEEB;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px; 
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+}
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
