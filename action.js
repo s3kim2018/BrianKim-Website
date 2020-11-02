@@ -5,7 +5,12 @@ function main() {
     var indiv1 = document.querySelector(".sidebar #aboutme");
     var indiv2 = document.querySelector(".sidebar #projects");
     var indiv3 = document.querySelector(".sidebar #Resume");
+    var contactmebut = document.getElementById('contactmebutton');
     var submitbut = document.querySelector(".content .buttoncontainer input");
+    contactmebut.addEventListener("click", function() {
+        var scrollto = document.querySelector(".content .contactme");
+        scrollto.scrollIntoView(); 
+    })
     indiv1.addEventListener("click", function() {
         var scrollto = document.querySelector(".content .aboutme");
         scrollto.scrollIntoView(); 
@@ -19,11 +24,11 @@ function main() {
         scrollto.scrollIntoView(); 
     });
     submitbut.addEventListener("click", function() {
-        document.querySelector(".content .aboutme .buttoncontainer p").style.color = "red";
-        var message = document.querySelector(".content .aboutme textarea").value; 
-        var email = document.querySelector(".content .aboutme #email").value;
-        var whoru = document.querySelector(".content .aboutme #whoru").value;
-        var msg = document.querySelector(".content .aboutme .buttoncontainer p");
+        document.querySelector(".content .buttoncontainer p").style.color = "red";
+        var message = document.querySelector(".content textarea").value; 
+        var email = document.querySelector(".content #email").value;
+        var whoru = document.querySelector(".content #whoru").value;
+        var msg = document.querySelector(".content .buttoncontainer p");
 
         if (email == "" && message == "") {
             attempts++;
@@ -62,7 +67,7 @@ function main() {
             } else if (attempts > 18) {
                 msg.innerHTML = "Stop.. plz";
             } else {
-                msg.innerHTML = "I need a valid email, or try breaking my regex (wink wink)"
+                msg.innerHTML = "I need a valid email, or try breaking my regex"
             }
             return;
         }
@@ -75,10 +80,10 @@ function main() {
             Subject : "Message from Web, From: " + email,
             Body : message,
             });
-        document.querySelector(".content .aboutme .buttoncontainer p").style.color = "green";
-        document.querySelector(".content .aboutme .buttoncontainer p").innerHTML = "Sent!";
-        document.querySelector(".content .aboutme textarea").value = "";
-        document.querySelector(".content .aboutme #email").value = "";
+        document.querySelector(".content .buttoncontainer p").style.color = "green";
+        document.querySelector(".content .buttoncontainer p").innerHTML = "Sent!";
+        document.querySelector(".content textarea").value = "";
+        document.querySelector(".content #email").value = "";
 
 
     })
@@ -211,6 +216,10 @@ var hover = async function(element, hov, option) {
         elem.innerHTML = "<br>Class: CS61B <br> Used Java to recreate create an ancient nordic game: Tablut. An ai was implemented too using game trees and alpha beta pruning. The AI is able to look forward 4 moves."; 
     } else if (option == 9) {
         elem.innerHTML = "<br>Class: CS61B <br> Used Java to recreate Git, we named it Gitlet. It has all the commands: init, add, commit, push, pull, checkout, merge... I also implemented the remote feature, allowing you to have a remote repository elsewhere. "
+    } else if (option == 13) {
+        elem.innerHTML = "<br>I Built a web/mobile app that converts professors’ live notes to audio for visually impaired students. I used a convolutional neural network trained on MNIST datasets to convert what the professor wrote to text. The Web Interface was built with Flask and the mobile interface was built with React Native. <br> <br> Won 2nd place prize on VandyHacks! ";
+    } else if (option == 14){
+        elem.innerHTML = "<br>I Built an IOS app that makes driving safer by providing navigation that considers safety in route-picking. Orthogonal Matching Persuit was used to lean from past accidents to determine the safest path a vehicle can take.";
     }
 
 }

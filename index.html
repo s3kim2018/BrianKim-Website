@@ -8,9 +8,9 @@
 
 </head>
 <body>
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
-    </div>
+    </div> -->
     <div class = "sidebar">
         <img src = img/face1.jpg id = "face">
         <div id = "nametext"> <text> Brian Kim </text> </div>
@@ -31,51 +31,46 @@
         <div class = "aboutme">
             <h3>A Little About Me...</h3>
             <p> Hello! I'm Brian, a second-year Computer Science student at the University of California, Berkeley. I am also a lab assistant for CS61B, a data structures class, a project developer for the Daily Californian, and a web dev assistant for UC Berkeley's Diversity and Inclusion division <br/><br/>
-            I was born in Korea and grew up at Saskatoon SK Canada, and I came to the United States for high school. Other than Computer Science, I love History and Political Science. My favorite Supreme Court Justices so far are Justice Ginsburg, Justice Kennedy, and Justice Scalia. My favorite court case is Texas v. Johnson, which reminds us what true freedom means. I also love investing in the stock market and netted an average return of 70% YTD on my investments (luck? I do not day/swing trade and I only buy companies that have > 40 billion market cap). <br/><br/>
-            My favorite data structure is graphs (look at the menubar) and my favorite programming language is Python. I like how flexible graphs are and can create steroid versions of itself to other data structures (like Trees!). I love Python because I like to use both procedural and object-oriented designs when programming. If they had private and protected variable declarations in Python, it would be a perfect programming language. 
+            I was born in Korea and grew up at Saskatoon SK Canada, and I came to the United States for high school. Other than Computer Science, I love History and Political Science.  <br/><br/>
+            My favorite data structure is graphs and my favorite programming language is Python. I like how flexible graphs are and can create steroid versions of itself to other data structures (like Trees!). I love Python because I like to use both procedural and object-oriented designs when programming. If they had private and protected variable declarations in Python, it would be a perfect programming language. 
           </p>
           <h3>Course Work at Berkeley</h3>
-          <p><a href = "http://cs61a.org">CS61A</a>: Structure and Interpretation of Computer Programs [Python] <br/>
-             <a href = "https://inst.eecs.berkeley.edu/~cs61b/fa19/index.html">CS61B</a>: Data Structures [Java] <br/>
-             <a href = "https://cs61c.org/">CS61C</a>: Great Ideas in Computer Architecture (Machine Structures) [C] <br/>
-             <a href = "http://www.eecs70.org/">CS70</a>: Discrete Math and Probability Theory [Just Math] <br/>
-             <a href = "http://www.eecs16a.org/">EE16A</a>: Designing Information Devices and Systems I [Just Math]  <br/>
-             Stats131A: Intro to Statistics [R Studio] <br/>
-             <a href = "http://www.stat134.org/">Stats134</a>: Concepts of Probability <br/> <br/>
-             * I can code in Python, Java, Javascript, HTML, CSS, C++ <br/>
-             * I am familiar with Scheme, R-Studio, JQuery, React, and SQL
+          <p><a href = "http://cs61a.org">CS61A</a>: Structure and Interpretation of Computer Programs<br/>
+             <a href = "https://inst.eecs.berkeley.edu/~cs61b/fa19/index.html">CS61B</a>: Data Structures<br/>
+             <a href = "https://cs61c.org/">CS61C</a>: Great Ideas in Computer Architecture (Machine Structures)<br/>
+             <a href = "http://www.eecs70.org/">CS70</a>: Discrete Math and Probability Theory<br/>
+             <a href = "https://cs170.org/">CS170</a>: Algorithms<br/>
+             <a href = "https://inst.eecs.berkeley.edu/~cs188/fa20/">CS188</a>: Artificial Intelligence<br/>
+             <a href = "http://www.eecs16a.org/">EE16A</a>: Designing Information Devices and Systems I<br/>
+             Stats131A: Intro to Statistics <br/>
+             <a href = "http://www.stat134.org/">Stats134</a>: Concepts of Probability <br/>
+             Math53: Multivariable Calculus <br/>
+             Math54: Linear Algebra <br/>
+             * I can code in Python, Java, Javascript, HTML, CSS, C, C++ <br/>
+             * Technologies I can use: JQuery, React, MongoDB, Spring Framework, Flask
             </p>
-            <h3> Contact Info</h3>
+            <h3 id = "contactmebutton"> Contact Me</h3>
             <p> Email: s3kim2018@berkeley.edu <br> Phone: 510-725-1220</p>
             <br>
-            <h3> Contact Me </h3>
-            <input type="text" id="email" name="lastname" placeholder="Your Email?">
-            <h5> Who Are You?</h5>
-            <select id="whoru" name="whoru">
-                <option value="employer">Employer</option>
-                <option value="friend">Friend</option>
-                <option value="family">Family</option>
-                <option value="troll">Troll</option>
-                <option value="hilfinger">Professor Hilfinger</option>
-                <option value="fuck">Pointer that didn't get Malloced</option>
-            </select>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-            <br>
-          <div class = "buttoncontainer">
-            <input type="submit" value="Submit">
-            <p> </p>
-          </div>
             <br>
             <br>
         </div>
 
         <div class = "projects">
             <h3> Individual Projects I've worked on.</h3>
-            <p> Clicking on them will take you to Github.</p>
+            <p> Clicking on the projects will take you to Github or Devpost.</p>
             <div class = "projectscontainer">
                 <div class = "elem" id = "elem1" onmouseover="hover('.projects .projectscontainer #elem1 #box1', '.projects .projectscontainer #elem1', 1)" onmouseleave="unhover('.projects .projectscontainer #elem1 #box1', '.projects .projectscontainer #elem1')" onclick = "location.href='https://github.com/s3kim2018/Refreshed-Website';">
                     <h4> This Website <br><br></h4>
                     <div class = "box" id = "box1"></div>
+                </div>
+                <div class = "elem" id = "elem6" onmouseover="hover('.projects .projectscontainer #elem6 #box6', '.projects .projectscontainer #elem6', 13)" onmouseleave="unhover('.projects .projectscontainer #elem6 #box6', '.projects .projectscontainer #elem6')" onclick = "location.href='https://devpost.com/software/edu-audio';">
+                    <h4> Edu Audio<br><br></h4>
+                    <div class = "box" id = "box6"></div>
+                </div>
+                <div class = "elem" id = "elem7" onmouseover="hover('.projects .projectscontainer #elem7 #box7', '.projects .projectscontainer #elem7', 14)" onmouseleave="unhover('.projects .projectscontainer #elem7 #box7', '.projects .projectscontainer #elem7')" onclick = "location.href='https://devpost.com/software/routesafe-uwqt4e';">
+                    <h4> RouteSafe<br><br></h4>
+                    <div class = "box" id = "box7"></div>
                 </div>
                 <div class = "elem" id = "elem2" onmouseover="hover('.projects .projectscontainer #elem2 #box2', '.projects .projectscontainer #elem2', 2)" onmouseleave="unhover('.projects .projectscontainer #elem2 #box2', '.projects .projectscontainer #elem2')" onclick = "location.href='https://github.com/s3kim2018/FEC-data-mining';">
                     <h4> Campaign Contribution Analyzer </h4>
@@ -117,8 +112,24 @@
         </div>
         <div class = "resume">
             <h3>My Résumé</h3>
-            <iframe src="img/Resume-pdf.pdf" width="90%" height="1000px"></iframe>
+            <iframe src="img/resume.pdf" width="90%" height="1000px"></iframe>
 
+        </div>
+        <div class = "contactme">
+            <h3> Contact Me </h3>
+            <input type="text" id="email" name="lastname" placeholder="Your Email?">
+            <h5> Who Are You?</h5>
+            <select id="whoru" name="whoru">
+                <option value="employer">Employer</option>
+                <option value="friend">Friend</option>
+                <option value="family">Family</option>
+            </select>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <br>
+            <div class = "buttoncontainer">
+                <input type="submit" value="Submit">
+                <p> </p>
+            </div>
         </div>
     </div>    
     <script src = "action.js" charset="utf-8"></script>
