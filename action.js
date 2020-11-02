@@ -147,7 +147,7 @@ async function delay(delayInms) {
 
 async function goby() {
     var t_div = document.getElementById("specs");
-    var text1 = "Computer Science and Economics Student";
+    var text1 = "Computer Science and Statistics Student";
     var text1s = "UC Berkeley Class of 2022";
     var text2 = "Software Engineer, Student, and Developer";
     var text3 = "Click on the Graph Nodes to get started!";
